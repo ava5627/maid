@@ -110,6 +110,40 @@ body {
     padding: 5px 10px;
 }
 
+@media (max-width: 600px) {
+    .user-container {
+        flex: auto;
+        max-width: 100%;
+    }
+    .user {
+        display: flex;
+        /* background-color: #415c87; */
+    }
+    .avatar-img {
+        width: 32px;
+        height: 32px;
+    }
+    .avatar {
+        background-color: #000;
+        position: relative;
+        display: block;
+    }
+    .username {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .message-container {
+        flex-direction: column;
+    }
+    .message {
+        padding: 15px;
+    }
+    .nav-link.one {
+        display: none;
+    }
+}
+
 .username > * {
     color: #0f0;
     font-weight: bold;
