@@ -1,11 +1,14 @@
 body {
     background-color: #000000;
+}
+.thread {
+    background-color: #000000;
     max-width: 1170px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-left: max(10px, env(safe-area-inset-left));
-    padding-right: max(10px, env(safe-area-inset-right));
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 * {
@@ -107,12 +110,20 @@ body {
     padding: 5px 10px;
 }
 
+.username > * {
+    color: #0f0;
+    font-weight: bold;
+}
+
 .message-header {
     color: #8c8c8c;
     border-bottom: 1px solid #374e72;
     padding: 8px 0px;
     margin-bottom: 8px;
     display: flex;
+}
+.message-header > * {
+    color: #8c8c8c;
 }
 
 .timestamp {
@@ -121,16 +132,12 @@ body {
 
 .message-id {
     margin-left: auto;
+    color: #8c8c8c;
 }
 
-.message-footer {
-    border-top: 1px solid #374e72;
-    padding: 8px 0px;
-    margin-top: 8px;
-    display: flex;
-}
 .page-nav {
     display: block;
+    border-radius: 0px;
 }
 
 .page-nav-pages {
@@ -160,7 +167,7 @@ body {
     border-bottom-color: #496898;
     border-left-color: #415c87;
 }
-.nav-link.current {
+.nav-link.current-page {
     font-weight: bold;
     color: #ccc;
     background-color: #415c87;
@@ -168,7 +175,6 @@ body {
 
 .page-nav-next, .page-nav-prev {
     display: inline-block;
-    color: #0f0;
     background-color: #191f2d;
     padding: 8px;
     border-width: 1px;
@@ -178,4 +184,10 @@ body {
     border-bottom-color: #496898;
     border-left-color: #415c87;
     border-radius: 4px;
+}
+.page-nav-next > *, .page-nav-prev > * {
+    color: #0f0;
+}
+p {
+    margin: 0;
 }
