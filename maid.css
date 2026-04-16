@@ -1,4 +1,4 @@
-.userstuff:has(.thread) {
+.userstuff:has(.thread), body {
     background-color: #000000;
     margin: 0;
 }
@@ -288,7 +288,7 @@ details:open + .thread .nav-link.one {
     display: none;
 }
 details:open + .thread .message-header {
-    font-size: .75rem;
+    font-size: 13.5px;
 }
 
 details:open + .thread .forum-breadcrumbs {
