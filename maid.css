@@ -187,10 +187,11 @@
     background-color: #415c87;
 }
 
-.thread .page-nav-next, .page-nav-prev {
+.thread .page-nav-next, .thread .page-nav-prev {
     display: inline-block;
     background-color: #191f2d;
     padding: 8px;
+    margin: 0 4.5px;
     border-width: 1px;
     border-style: solid;
     border-top-color: #374e72;
@@ -200,9 +201,22 @@
     border-radius: 4px;
     color: #0f0;
 }
-.thread .page-nav-next p, .page-nav-prev p {
+.thread a {
     color: #0f0;
+    text-decoration: none;
+    border: 0;
 }
+
+.thread a:hover {
+    color: #0f0;
+    text-decoration: underline;
+}
+
+.thread .page-nav-next a:hover, .thread .page-nav-prev a:hover {
+    color: #fff;
+    text-decoration: none;
+    border: 0;
+};
 
 .thread blockquote {
     border: 1px solid #374e72;
