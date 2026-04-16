@@ -1,5 +1,6 @@
-body {
+.userstuff:has(.thread) {
     background-color: #000000;
+    margin: 0;
 }
 .thread {
     background-color: #000000;
@@ -9,19 +10,16 @@ body {
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-* {
     font-family: 'Segoe UI','Helvetica Neue',Helvetica,Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-serif;
 }
 .thread p {
     margin: 0;
 }
-.link {
+.thread .link {
     color: #0f0;
 }
 
-.forum-breadcrumbs {
+.thread .forum-breadcrumbs {
     background-color: #191f2d;
     border-width: 1px;
     border-style: solid;
@@ -35,27 +33,27 @@ body {
     margin: 10px 0;
     color: #0f0;
 }
-.forum-link {
+.thread .forum-link {
     color: #0f0;
 }
 
-.forum-link.last {
+.thread .forum-link.last {
     font-weight: bold;
 }
 
-.thread-title {
+.thread .thread-title {
     font-size: 1rem;
     font-weight: 400;
     margin-right: Auto;
     color: #ccc;
 }
 
-.thread-subtitle {
+.thread .thread-subtitle {
     font-size: 0.875rem;
     color: #8c8c8c;
 }
 
-.message-container {
+.thread .message-container {
     box-sizing: border-box;
     background: #191f2d;
     border-width: 1px;
@@ -71,7 +69,7 @@ body {
     margin: 0 0 5px 0;
 }
 
-.message {
+.thread .message {
     background-color: #191f2d;
     box-sizing: border-box;
     display: block;
@@ -80,10 +78,10 @@ body {
     width: 100%;
 }
 
-.message-content {
+.thread .message-content {
   color: #cccccc;
 }
-.user-container {
+.thread .user-container {
     flex: 0 0 160px;
     max-width: 160px;
     position: relative;
@@ -92,24 +90,22 @@ body {
     overflow: hidden;
     word-wrap: break-word;
 }
-.user {
+.thread .user {
     background-color: #000;
     border: 1px solid #415c87;
     margin: 8px;
 }
 
-.avatar {
+.thread .avatar {
     padding: 10px;
 }
-.avatar-img {
+.thread .avatar-img {
     width: 96px;
     height: 96px;
     display: inline-flex;
     border-radius: 4px;
-    object-fit: cover;
-    object-position: top;
 }
-.username {
+.thread .username {
     background-color: #415c87;
     color: #0f0;
     font-weight: bold;
@@ -118,61 +114,61 @@ body {
     padding: 5px 10px;
 }
 
-.username > * {
+.thread .username > * {
     color: #0f0;
     font-weight: bold;
 }
 
-.message-header {
+.thread .message-header {
     color: #8c8c8c;
     border-bottom: 1px solid #374e72;
     padding: 8px 0px;
     margin-bottom: 8px;
     display: flex;
 }
-.message-header > * {
+.thread .message-header > * {
     color: #8c8c8c;
 }
 
-.timestamp {
+.thread .timestamp {
     color: #8c8c8c;
 }
 
-.message-id {
+.thread .message-id {
     margin-left: auto;
     color: #8c8c8c;
 }
 
-.page-nav {
+.thread .page-nav {
     display: block;
     border-radius: 0px;
 }
 
-.page-nav-pages {
+.thread .page-nav-pages {
     display: inline-table;
     padding: 0;
 }
-.mobile-page-nav {
+.thread .mobile-page-nav {
     display: none;
     margin: 10px 0;
 }
 
-.mobile-nav-link {
+.thread .mobile-nav-link {
     display: inline-block;
     border-radius: 4px;
     margin: 0 4px;
 }
 
-.page-nav-pages > :first-child {
+.thread .page-nav-pages > :first-child {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
-.page-nav-pages > :last-child {
+.thread .page-nav-pages > :last-child {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-.nav-link {
+.thread .nav-link {
     color: #0f0;
     background-color: #191f2d;
     padding: 8px;
@@ -185,13 +181,13 @@ body {
     border-bottom-color: #496898;
     border-left-color: #415c87;
 }
-.nav-link.current-page {
+.thread .nav-link.current-page {
     font-weight: bold;
     color: #ccc;
     background-color: #415c87;
 }
 
-.page-nav-next, .page-nav-prev {
+.thread .page-nav-next, .page-nav-prev {
     display: inline-block;
     background-color: #191f2d;
     padding: 8px;
@@ -204,7 +200,7 @@ body {
     border-radius: 4px;
     color: #0f0;
 }
-.page-nav-next p, .page-nav-prev p {
+.thread .page-nav-next p, .page-nav-prev p {
     color: #0f0;
 }
 
@@ -217,94 +213,139 @@ body {
     color: #cccccc;
 }
 
-@media (max-width: 650px) {
-    body {
-        margin: 0;
-    }
-    .thread {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .user-container {
-        flex: auto;
-        max-width: 100%;
-    }
-    .user {
-        display: flex;
-        margin: 0 0 8px 0;
-        border: 0;
-        border-bottom: 1px solid #415c87;
-        padding: 10px;
-        font-size: 1em;
-    }
-    .mobile-page-nav {
-        display: inline-flex;
-    }
-    .page-nav {
-        display: none;
-    }
-
-    .nav-link.current-page {
-        font-weight: normal;
-    }
-    .avatar-img {
-        width: 48px;
-        height: 48px;
-        margin-bottom: .5em;
-    }
-    .avatar {
-        background-color: #000;
-        position: relative;
-        display: block;
-        padding: 0px;
-    }
-    .username {
-        display: block;
-        width: 100%;
-        text-align: left;
-        background-color: transparent;
-        padding: 0 0 0 10px;
-    }
-    .message-container {
-        flex-direction: column;
-        border-radius: 0px;
-        border-left: none;
-        border-right: none;
-        margin: 0 0 8px 0;
-    }
-    .message {
-        padding: 15px;
-        padding-top: 0px;
-        font-size: 0.875rem;
-    }
-    .nav-link.one {
-        display: none;
-    }
-    .message-header {
-        font-size: .75rem;
-    }
+details:open + .thread {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+}
+details:open + .thread .user-container {
+    flex: auto;
+    max-width: 100%;
+}
+details:open + .thread .user {
+    display: flex;
+    margin: 0 0 8px 0;
+    border: 0;
+    border-bottom: 1px solid #415c87;
+    padding: 10px;
+    font-size: 1em;
+}
+details:open + .thread .mobile-page-nav {
+    display: inline-flex;
+}
+details:open + .thread .page-nav {
+    display: none;
 }
 
-.hljs-tag {
-    color: #0db9d7;
+details:open + .thread .nav-link.current-page {
+    font-weight: normal;
 }
-.hljs-attr {
-    color: #65bdb1;
+details:open + .thread .avatar-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: .5em;
 }
-.hljs-name {
-    color: #bb9af7;
+details:open + .thread .avatar {
+    background-color: #000;
+    position: relative;
+    display: block;
+    padding: 0px;
 }
-.hljs-string {
-    color: #9ece6a;
+details:open + .thread .username {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    padding: 0 0 0 10px;
 }
-.hljs-selector-id, .hljs-selector-class, .hljs-attribute {
-    color: #65bdb1;
+details:open + .thread .message-container {
+    flex-direction: column;
+    border-radius: 0px;
+    border-left: none;
+    border-right: none;
+    margin: 0 0 8px 0;
 }
-.hljs-number {
-    color: #ff9e64;
+details:open + .thread .message {
+    padding: 15px;
+    padding-top: 0px;
+    font-size: 0.875rem;
+}
+details:open + .thread .nav-link.one {
+    display: none;
+}
+details:open + .thread .message-header {
+    font-size: .75rem;
+}
+
+.mobile {
+    padding: 5px 10px;
+    margin: 10px auto;
+}
+.mobile summary {
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #191f2d;
+    color: #cccccc;
+    max-width: 1170px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #374e72;
+    border-right-color: #415c87;
+    border-bottom-color: #496898;
+    border-left-color: #415c87;
+}
+
+.mobile ::marker {
+    content: "";
+}
+
+.mobile summary:hover {
+    background-color: #1f2a3d;
+}
+
+.mobile summary:after {
+    content: "Disabled";
+    color: red;
+}
+
+.mobile[open] summary:after {
+    content: "Enabled";
+    color: #0f0;
+}
+.mobile[open] summary {
+    background-color: #415c87;
+}
+
+
+.code-container .hljs-tag {
+  color: #0db9d7;
+}
+
+.code-container .hljs-attr {
+  color: #65bdb1;
+}
+
+.code-container .hljs-name {
+  color: #bb9af7;
+}
+
+.code-container .hljs-string {
+  color: #9ece6a;
+}
+
+.code-container .hljs-selector-id,
+.code-container .hljs-selector-class,
+.code-container .hljs-attribute {
+  color: #65bdb1;
+}
+
+.code-container .hljs-number {
+  color: #ff9e64;
 }
 
 .code-container {
-    background-color: #15161e;
-    color: #c0caf5;
+  background-color: #15161e;
+  color: #c0caf5;
 }
+
+
